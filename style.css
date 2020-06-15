@@ -1,39 +1,37 @@
+body{
+  background-color: #efee9d;
+}
 main{
   height: 100%;
   width: 100%;
   overflow: hidden;
-  position: fixed;
-  background-color: #efee9d;
 }
 #top-bar{
   text-align: center;
   vertical-align: middle;
   line-height: 50px;
   margin: auto;
+  margin-top: 10px;
+
   height: 50px;
   width: 95%;
   border-radius: 20px;
   background-color: #d1eaa3;
 }
-#button-bar{
-  margin: auto;
-  height: 50px;
-  width: 95%;
-  border-radius: 20px;
-  background-color: #dbc6eb;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
 
-}
 #library{
   margin: auto;
-  height: 600px;
+  margin-top: 10px;
+  height: 100%;
   width: 95%;
   border-radius: 20px;
   background-color: #abc2e8;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
 }
+
 .button {
 	box-shadow:inset 0px 1px 0px 0px #ffffff;
 	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
@@ -58,3 +56,127 @@ main{
 	position:relative;
 	top:1px;
 }
+
+.book {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	background-color:#f9f9f9;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:16px;
+	font-weight:bold;
+	text-decoration:none;
+  text-shadow:0px 1px 0px #ffffff;
+  height: 150px;
+  width: 130px;
+  margin: 10px ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.book:hover {
+	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+	background-color:#e9e9e9;
+}
+.book:active {
+	position:relative;
+	top:1px;
+}
+
+.properties {
+  /* background-color: lightblue; */
+  width: 100%;
+  min-height: 30px;
+  font-size: smaller;
+  margin: auto;
+  margin-top: 2px;
+  padding-top: 2px;
+  padding-left: 5px;
+}
+.delete-button {
+  background-color: #dbc6eb;
+  opacity: 0.8;
+  width: 80%;
+  align-self: center;
+  color: brown;
+  font-weight: bolder;
+  border: none;
+  position: relative;
+  top: -5px;
+  /* display: none; */
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #4CAF50;
+  opacity: 0.8;
+  color: white;
+  font-weight: bolder;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 50px;
+  width: 200px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 220px;
+  padding: 10px;
+  background-color: #d1eaa3;
+  ;
+}
+
+/* Full-width input fields */
+.form-container input[type=text] {
+  width: 90%;
+  padding: 5px;
+  margin: 5px 0 10px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: rgb(172, 13, 13);
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+

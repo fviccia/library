@@ -8,20 +8,38 @@
 </head>
 <body>
   <main> 
-    <div id="full-size">
-      <div id="top-bar"><h1>My library</h1></div>
-      <div id="button-bar">
-            <div><button class="button">Add Book</button></div>
-            <div><button class="button">Button</button></div>
-            <div><button class="button">Button</button></div>
-      </div>
-      <div id="library"></div>
+    <div id='full-size'>
+      <div id='top-bar'><h1>My library</h1></div>
+     
+      <div id='library'></div>
 
+      <button class='open-button' onclick='openForm()'>Add New Book</button>
+
+      <div class='form-popup' id='myForm'>
+      <form class='form-container'>
+        <h1 style='text-align: center;'>New Book</h1>
+
+        <label for='-form-title' ><b>Title</b></label>
+        <input type='text' placeholder='Enter Title' name='form-title' id='title' required>
+
+        <label for='form-author'><b>Author</b></label>
+        <input type='text' placeholder='Enter Author' name='form-author' id='author' required>
+
+        <label for='form-pages'><b>Number of Pages</b></label>
+        <input type='text' placeholder='Enter Number of Pages' name='form-pages' id='pages' required>
+
+        <label for='form-readed'><b>Have you read it yet?</b></label>
+        <input type='text' placeholder='Enter Yes or No' name='form-readed' id='readed' required>
+
+        <button type='button' class='btn' onclick='addBookToLibrary()'>Add New Book</button>
+        <button type='button' class='btn cancel' onclick='closeForm()'>Close</button>
+      </form>
+      </div>
       
     </div>
 
   </main>
 
-<script src="/script.js"></script>
+<script src='/script.js'></script>
 </body>
 </html>
