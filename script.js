@@ -7,6 +7,7 @@ let myLibrary = [
   let author = document.getElementById('author');
   let pages = document.getElementById('pages');
   let readed = document.getElementById('readed');
+  let form = document.getElementById('newBookForm');
   
   let id = 0;
   
@@ -27,6 +28,7 @@ function addBookToLibrary() {
   myLibrary.push(book);
   library.innerHTML = '';
   render();
+  form.reset();
 }
 
 function render() {
@@ -58,6 +60,7 @@ function openForm() {
 
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
+  form.reset();
 }
 
 
