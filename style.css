@@ -88,7 +88,6 @@ main{
 }
 
 .properties {
-  /* background-color: lightblue; */
   width: 100%;
   min-height: 30px;
   font-size: smaller;
@@ -107,7 +106,7 @@ main{
   border: none;
   position: relative;
   top: -5px;
-  display: none;
+  display: block;
 }
 .delete-button {
   background-color: #4CAF50;
