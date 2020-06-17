@@ -102,11 +102,22 @@ main{
   width: 80%;
   align-self: center;
   color: brown;
-  font-weight: bolder;
+  font-weight: bold;
+  border: none;
+  position: relative;
+  top: -10px;
+  display: none;
+}
+.readed {
+  background-color: #abc2e8;
+  opacity: 0.8;
+  width: 80%;
+  align-self: center;
+  color: green;
   border: none;
   position: relative;
   top: -5px;
-  display: block;
+  display: none;
 }
 .delete-button {
   background-color: #4CAF50;
@@ -118,12 +129,24 @@ main{
   cursor: pointer;
   position: fixed;
   bottom: 10px;
-  right: 280px;
+  right: 300px;
+  width: 200px;
+}
+.readed-button {
+  background-color: #4CAF50;
+  opacity: 0.8;
+  color: white;
+  font-weight: bolder;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 550px;
   width: 200px;
 }
 
-/* Button used to open the contact form - fixed at the bottom of the page */
-.open-button {
+.form-button {
   background-color: #4CAF50;
   opacity: 0.8;
   color: white;
