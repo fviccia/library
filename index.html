@@ -13,13 +13,13 @@
      
       <div id='library'></div>
 
-      <button class='form-button' onclick='openForm()'>Add New Book</button>
-      <button class='delete-button' onclick='showDeleteButton()'>Delete a Book</button>
-      <button class='readed-button' onclick='showReadedButton()'>Change Readed Status</button>
+      <button class="bottom-button" id='form-button' onclick='openForm()'>Add New Book</button>
+      <button class="bottom-button" id='delete-button' onclick='showDeleteButton()'>Delete a Book</button>
+      <button class="bottom-button" id='readed-button' onclick='showReadedButton()'>Change Readed Status</button>
 
       <div class='form-popup' id='myForm'>
       <form class='form-container' id="newBookForm">
-        <h1 style='text-align: center;'>New Book</h1>
+        <h1 id="new-book" >Add a New Book</h1>
 
         <label for='-form-title' ><b>Title</b></label>
         <input type='text' placeholder='Enter Title' name='form-title' id='title' required>
@@ -33,7 +33,7 @@
         <label for='form-readed'><b>Have you read it yet?</b></label>
         <input type='text' placeholder='Enter Yes or No' name='form-readed' id='readed' required>
 
-        <button type='button' class='btn' onclick='addBookToLibrary()'>Add New Book</button>
+        <button type='text' class='btn' onclick='addBookToLibrary()'>Add New Book</button>
         <button type='button' class='btn cancel' onclick='closeForm()'>Close</button>
       </form>
       </div>

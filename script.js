@@ -23,6 +23,7 @@ function Book(title, author, pages, readed) {
 }
 
 function addBookToLibrary() {
+  if (title.value == '' || author.value == '' || pages.value == '' || readed.value == '') return;
   let book = new Book(title.value, author.value, pages.value, readed.value);
   myLibrary.push(book);
   render();
@@ -110,12 +111,12 @@ function closeForm() {
 function showDeleteButton() {
   if (deleteTracking == 0) {
     [].forEach.call(document.querySelectorAll('.delete'), function (el) {
-      el.style.display = 'block';
+      el.style.visibility = 'visible';
     });
     deleteTracking = 1;
   } else {
     [].forEach.call(document.querySelectorAll('.delete'), function (el) {
-      el.style.display = 'none';
+      el.style.visibility = 'hidden';
     });
     deleteTracking = 0;
   }
@@ -124,12 +125,12 @@ function showDeleteButton() {
 function showReadedButton() {
   if (readedTracking == 0) {
     [].forEach.call(document.querySelectorAll('.readed'), function (el) {
-      el.style.display = 'block';
+      el.style.visibility = 'visible';
     });
     readedTracking = 1;
   } else {
     [].forEach.call(document.querySelectorAll('.readed'), function (el) {
-      el.style.display = 'none';
+      el.style.visibility = 'hidden';
     });
     readedTracking = 0;
   }
