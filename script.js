@@ -11,8 +11,6 @@ let myLibrary = [
   let deleteTracking = 0;
   let readedTracking = 0;
   render();
-  // showDeleteButton();
-  // showReadedButton();
 
 // The constructor.
 function Book(title, author, pages, readed) {
@@ -46,8 +44,10 @@ function render() {
     // Set the readed property according to the readed boolean value.
     if (properties[i] == true) {
       property.innerHTML = 'Readed';
+      property.className = 'read-status';
     } else if (properties[i] == false) {
       property.innerHTML = 'Not Readed';
+      property.className = 'read-status';
     }
     div.appendChild(property);
   }
