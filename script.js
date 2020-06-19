@@ -10,6 +10,9 @@ let myLibrary = [
   let form = document.getElementById('newBookForm');
   let deleteTracking = 0;
   let readedTracking = 0;
+  if (localStorage.length == 1) {
+    pullFromLocalStorage();
+  }
   render();
 
 // The constructor.
@@ -20,10 +23,18 @@ function Book(title, author, pages, readed) {
   this.readed = (readed.toLowerCase() == 'yes');
 }
 
+function pushToLocalStorage() {
+  localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
+}
+function pullFromLocalStorage() {
+  myLibrary = JSON.parse(localStorage.getItem('myLibrary'));
+}
+
 function addBookToLibrary() {
   if (title.value == '' || author.value == '' || pages.value == '' || readed.value == '') return;
   let book = new Book(title.value, author.value, pages.value, readed.value);
   myLibrary.push(book);
+  pushToLocalStorage();
   render();
   form.reset();
 }
@@ -69,6 +80,7 @@ function addDeleteButton() {
     deleteBook.onclick = function(){
       let index = deleteBook.id;
       myLibrary.splice(index, 1);
+      pushToLocalStorage();
       render();
       showDeleteButton();
     };   
@@ -89,8 +101,10 @@ function addReadedButton() {
       let index = readedButton.id;
       if (myLibrary[index]['readed'] == true) {
         myLibrary[index]['readed'] = false;
+        pushToLocalStorage();
       } else {
         myLibrary[index]['readed'] = true;
+        pushToLocalStorage();
       }
       render();
       showReadedButton();
